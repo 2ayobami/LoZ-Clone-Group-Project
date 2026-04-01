@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://cldqlmffuaehu"]
+
+[ext_resource type="PackedScene" uid="uid://ceuagovjjkm7i" path="res://Objects/player.tscn" id="1_f3sb7"]
+[ext_resource type="PackedScene" uid="uid://bmfkbsknlo36t" path="res://Objects/camera.tscn" id="2_fj7yv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gv5m4"]
+size = Vector2(40, 40)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f3sb7"]
+size = Vector2(40, 40)
+
+[node name="World" type="Node2D" unique_id=1670081669]
+
+[node name="BG Placeholder" type="ColorRect" parent="." unique_id=1366957260]
+offset_right = 256.0
+offset_bottom = 256.0
+color = Color(0.48190182, 0.79623985, 0.42125133, 1)
+
+[node name="Collision Test Visual" type="ColorRect" parent="." unique_id=2117837400]
+offset_left = 50.0
+offset_top = 91.0
+offset_right = 90.0
+offset_bottom = 131.0
+color = Color(0.2728393, 0.5913983, 0.29089406, 1)
+
+[node name="Collision Test Visual2" type="ColorRect" parent="." unique_id=1698053589]
+offset_left = 148.0
+offset_top = 84.0
+offset_right = 188.0
+offset_bottom = 124.0
+color = Color(0.2728393, 0.5913983, 0.29089406, 1)
+
+[node name="Collision Test" type="StaticBody2D" parent="." unique_id=1127624192]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Collision Test" unique_id=800198664]
+position = Vector2(70, 111)
+shape = SubResource("RectangleShape2D_gv5m4")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Collision Test" unique_id=55684566]
+position = Vector2(168, 104)
+shape = SubResource("RectangleShape2D_f3sb7")
+
+[node name="Player" parent="." unique_id=856887729 instance=ExtResource("1_f3sb7")]
+position = Vector2(128, 192)
+
+[node name="Camera" parent="." unique_id=1572491455 instance=ExtResource("2_fj7yv")]
+position = Vector2(128, 192)

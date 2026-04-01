@@ -1,0 +1,10 @@
+CharacterBody3D
+ColorRect
+TextureRect
+CanvasLayer
+Camera2D
+Node
+AnimatedSprite2D
+CollisionShape2D
+StaticBody2D
+CharacterBody2D

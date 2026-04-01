@@ -1,0 +1,5 @@
+res://Objects/player.tscn
+res://world.tscn
+res://Objects/camera.tscn
+res://Objects/player.gd
+res://Objects/camera.gd
