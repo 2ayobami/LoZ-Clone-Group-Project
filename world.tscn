@@ -1,47 +1,69 @@
-[gd_scene format=3 uid="uid://cldqlmffuaehu"]
+[gd_scene format=4 uid="uid://cldqlmffuaehu"]
 
 [ext_resource type="PackedScene" uid="uid://ceuagovjjkm7i" path="res://Objects/player.tscn" id="1_f3sb7"]
 [ext_resource type="PackedScene" uid="uid://bmfkbsknlo36t" path="res://Objects/camera.tscn" id="2_fj7yv"]
+[ext_resource type="Texture2D" uid="uid://cgqtg1ib5rus4" path="res://Sprites/Grasswall tiles.png" id="3_tlwt5"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_gv5m4"]
-size = Vector2(40, 40)
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_aqk2v"]
+texture = ExtResource("3_tlwt5")
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:0/0 = 0
+3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:0/0 = 0
+4:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:1/0 = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:1/0 = 0
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:1/0 = 0
+3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:1/0 = 0
+4:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+5:1/0 = 0
+5:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:2/0 = 0
+1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:2/0 = 0
+2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 0, 0, -8, 8)
+4:2/0 = 0
+4:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, 0, 0)
+5:2/0 = 0
+5:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:3/0 = 0
+2:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 1, 1, 8, 8, -8, 8)
+4:3/0 = 0
+4:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(0, 0, 8, -8, 8, 8, -8, 8)
+3:4/0 = 0
+3:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:3/0 = 0
+0:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:3/0 = 0
+1:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:4/0 = 0
+1:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:4/0 = 0
+0:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_f3sb7"]
-size = Vector2(40, 40)
+[sub_resource type="TileSet" id="TileSet_036b0"]
+physics_layer_0/collision_layer = 1
+sources/1 = SubResource("TileSetAtlasSource_aqk2v")
 
 [node name="World" type="Node2D" unique_id=1670081669]
 
-[node name="BG Placeholder" type="ColorRect" parent="." unique_id=1366957260]
+[node name="BG Grass" type="ColorRect" parent="." unique_id=1366957260]
 offset_right = 256.0
 offset_bottom = 256.0
-color = Color(0.48190182, 0.79623985, 0.42125133, 1)
-
-[node name="Collision Test Visual" type="ColorRect" parent="." unique_id=2117837400]
-offset_left = 50.0
-offset_top = 91.0
-offset_right = 90.0
-offset_bottom = 131.0
-color = Color(0.2728393, 0.5913983, 0.29089406, 1)
-
-[node name="Collision Test Visual2" type="ColorRect" parent="." unique_id=1698053589]
-offset_left = 148.0
-offset_top = 84.0
-offset_right = 188.0
-offset_bottom = 124.0
-color = Color(0.2728393, 0.5913983, 0.29089406, 1)
-
-[node name="Collision Test" type="StaticBody2D" parent="." unique_id=1127624192]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Collision Test" unique_id=800198664]
-position = Vector2(70, 111)
-shape = SubResource("RectangleShape2D_gv5m4")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Collision Test" unique_id=55684566]
-position = Vector2(168, 104)
-shape = SubResource("RectangleShape2D_f3sb7")
+color = Color(0.5686275, 0.73333335, 0.40784314, 1)
 
 [node name="Player" parent="." unique_id=856887729 instance=ExtResource("1_f3sb7")]
 position = Vector2(128, 192)
 
 [node name="Camera" parent="." unique_id=1572491455 instance=ExtResource("2_fj7yv")]
 position = Vector2(128, 192)
+
+[node name="Walls" type="TileMapLayer" parent="." unique_id=1662385395]
+tile_map_data = PackedByteArray("AAAAAA8AAQABAAAAAAAAAA4AAQABAAAAAAABAA4AAQABAAAAAAACAA4AAQADAAQAAAADAA4AAQADAAQAAAAEAA4AAQADAAQAAAAFAA4AAQADAAQAAAAFAA8AAQABAAAAAAAGAA8AAQABAAAAAAAHAA8AAQABAAAAAAAIAA8AAQABAAAAAAAJAA8AAQABAAAAAAAKAA8AAQABAAAAAAALAA8AAQABAAAAAAALAA4AAQADAAQAAAAMAA4AAQADAAQAAAANAA4AAQADAAQAAAAOAA4AAQABAAAAAAAPAA4AAQABAAAAAAAPAA8AAQABAAAAAAABAA8AAQABAAAAAAACAA8AAQABAAAAAAADAA8AAQABAAAAAAAEAA8AAQABAAAAAAAGAA4AAQADAAQAAAAHAA4AAQADAAQAAAAIAA4AAQADAAQAAAAJAA4AAQADAAQAAAAKAA4AAQADAAQAAAAMAA8AAQABAAAAAAANAA8AAQABAAAAAAAOAA8AAQABAAAAAAABAA0AAQABAAIAAAABAAwAAQABAAIAAAAAAAwAAQABAAAAAAAAAA0AAQABAAAAAAABAAsAAQACAAMAAAAAAAsAAQADAAQAAAAAAAkAAQADAAEAAAAAAAgAAQADAAAAAAABAAgAAQACAAEAAAABAAkAAQACAAIAAAACAAgAAQACAAIAAAADAAcAAQACAAIAAAAFAAYAAQADAAEAAAAEAAYAAQADAAEAAAAGAAYAAQACAAIAAAAGAAUAAQACAAEAAAAFAAUAAQADAAAAAAAEAAUAAQADAAAAAAADAAYAAQACAAEAAAACAAcAAQACAAEAAAABAAcAAQABAAEAAAACAAYAAQABAAEAAAADAAUAAQABAAEAAAAAAAcAAQABAAAAAAAAAAYAAQABAAAAAAABAAYAAQABAAAAAAAAAAUAAQABAAAAAAABAAUAAQABAAAAAAACAAUAAQABAAAAAAAJAAUAAQAFAAIAAAAJAAYAAQAFAAIAAAAJAAcAAQAFAAIAAAAJAAgAAQAEAAEAAAAJAAkAAQAEAAIAAAAKAAkAAQADAAEAAAALAAkAAQADAAEAAAAMAAkAAQADAAEAAAANAAkAAQADAAEAAAAOAAkAAQADAAEAAAAPAAkAAQADAAEAAAAKAAgAAQADAAAAAAALAAgAAQADAAAAAAAMAAgAAQADAAAAAAANAAgAAQADAAAAAAAOAAgAAQADAAAAAAAPAAgAAQADAAAAAAAKAAUAAQABAAAAAAAKAAYAAQABAAAAAAAKAAcAAQABAAAAAAALAAUAAQABAAAAAAALAAYAAQABAAAAAAALAAcAAQABAAAAAAAMAAUAAQABAAAAAAAMAAYAAQABAAAAAAAMAAcAAQABAAAAAAANAAUAAQABAAAAAAANAAYAAQABAAAAAAANAAcAAQABAAAAAAAOAAUAAQABAAAAAAAOAAYAAQABAAAAAAAOAAcAAQABAAAAAAAPAAUAAQABAAAAAAAPAAYAAQABAAAAAAAPAAcAAQABAAAAAAAOAA0AAQAFAAIAAAAOAAwAAQAFAAIAAAAPAA0AAQABAAAAAAAPAAwAAQABAAAAAAAPAAsAAQADAAQAAAAOAAsAAQAAAAMAAAA=")
+tile_set = SubResource("TileSet_036b0")
