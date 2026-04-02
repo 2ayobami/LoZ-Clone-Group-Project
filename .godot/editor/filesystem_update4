@@ -1,2 +1,4 @@
 res://world.tscn
+res://Objects/player.tscn
+res://Objects/player.gd
 res://Objects/camera.tscn
